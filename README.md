@@ -10,7 +10,7 @@ In this project I scraped information and images from the nasa.gov website and d
 
 We then imported this function into our flask app (app.py) and set up our code to run this function whenever the "scrape" button was pressed on our index.html page.
 
-<img width="546" alt="Screen Shot 2020-10-02 at 12 41 08 PM" src="https://user-images.githubusercontent.com/66881241/94963728-6b3dd600-04ad-11eb-965a-90dd3ef74e1c.png">
+<img width="572" alt="Screen Shot 2020-10-02 at 12 50 51 PM" src="https://user-images.githubusercontent.com/66881241/94964065-f919c100-04ad-11eb-9885-4419891d6124.png">
 
 
 To do the actual scraping we used splinter to navigate to webpages and save the html to a variable. Then we used Beautiful Soup to actually scrape the data from the HTML. This was done in our scraping.py file which was a collection of funtions that would return scraped data:
