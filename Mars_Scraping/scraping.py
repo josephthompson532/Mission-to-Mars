@@ -112,28 +112,39 @@ def title_url(browser):
     html = browser.html
     hemi_image = soup(html, 'html.parser')
 
-
+    # Create a for loop find all div's matching the class "item" from hemi_image
     for item in hemi_image.find_all("div", class_="item"):
         
+        #Create a dictionary to hold the hemisphere photos.
         hemispheres= {}
         
+        #Get the thumbnail text from the heading 3 HTML tag
         thumb_nail = item.select_one('h3').get_text()
         
+        # Find all href attributes for <a> tags with the class "itemLink product-item" 
+        # and assign them to a variable.
         link = item.find('a', class_='itemLink product-item')['href']
         
+        #Visit the link using Splinter
         browser.visit(f'https://astrogeology.usgs.gov{link}')
         
+        # Get the html from the new link
         html = browser.html
         
+        # Put the html into a beautiful soup
         mysoup = soup(html, 'html.parser')
         
+        #Find all div tags with the parent class holding the img
         downloads_img = mysoup.find('div', class_='downloads')
         
+        # Get the href attributes of the  image jpg
         img_url = downloads_img.find('a')['href']
         
+        # Assign the values to our hemisphere dictionary.
         hemispheres['title']= thumb_nail
         hemispheres['url']= img_url
         
+        #Append the dictionary to hisphere_image_urls
         hemisphere_image_urls.append(hemispheres)
 
     return hemisphere_image_urls
