@@ -6,14 +6,13 @@ The purpose of this project was to impress Nasa employers by scraping from vario
 ### Overview
 In this project I scraped information and images from the nasa.gov website and displayed them in a Flask app that I created. To do this I incorporated a Mongo database, BeautifulSoup, Splinter as well as an index.html file to style and display my scraped data. First we created the database in mongo and connected it to our flask application. Then we wrote code in a separate scraping.py file that would, at the click of a button, rescrape all of the most recent nasa.gov data. We did this by defining a series of functions, which were all called when a scrape_all() function was called:
 
-<img width="658" alt="Screen Shot 2020-10-02 at 12 53 50 PM" src="https://user-images.githubusercontent.com/66881241/94964246-59a8fe00-04ae-11eb-8404-f1485cdfed90.png">
 <img width="504" alt="Screen Shot 2020-10-02 at 12 53 37 PM" src="https://user-images.githubusercontent.com/66881241/94964253-5c0b5800-04ae-11eb-8d4c-a6cc5da4e54f.png">
 
 
 We then imported this function into our flask app (app.py) and set up our code to run this function whenever the "scrape" button was pressed on our index.html page.
 
 
-<img width="546" alt="Screen Shot 2020-10-02 at 12 41 08 PM" src="https://user-images.githubusercontent.com/66881241/94964139-20708e00-04ae-11eb-88e1-f1ab273b12e1.png">
+<img width="658" alt="Screen Shot 2020-10-02 at 12 53 50 PM" src="https://user-images.githubusercontent.com/66881241/94964246-59a8fe00-04ae-11eb-8404-f1485cdfed90.png">
 
 
 To do the actual scraping we used splinter to navigate to webpages and save the html to a variable. Then we used Beautiful Soup to actually scrape the data from the HTML. This was done in our scraping.py file which was a collection of funtions that would return scraped data:
