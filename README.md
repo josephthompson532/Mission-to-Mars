@@ -30,5 +30,4 @@ The website is capable of all features I set out to apply to it. It successfully
 
 
 ![Screen Shot 2020-12-30 at 10 02 28 PM](https://user-images.githubusercontent.com/66881241/103396972-eafa3180-4aea-11eb-8a83-e3237877798f.png)
-
 ![Screen Shot 2020-12-30 at 10 02 51 PM](https://user-images.githubusercontent.com/66881241/103396971-e9306e00-4aea-11eb-9032-95ba0ea8488c.png)
