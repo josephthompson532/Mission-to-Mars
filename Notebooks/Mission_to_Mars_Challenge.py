@@ -164,7 +164,7 @@ print(weather_table.prettify())
 # In[19]:
 
 
-# 1. Use browser to visit the URL 
+# Use browser to visit the URL 
 url = 'https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars'
 browser.visit(url)
 
@@ -172,10 +172,10 @@ browser.visit(url)
 # In[20]:
 
 
-# 2. Create a list to hold the images and titles.
+# Create a list to hold the images and titles.
 hemisphere_image_urls = []
 
-# 3. Write code to retrieve the image urls and titles for each hemisphere.
+# Write code to retrieve the image urls and titles for each hemisphere.
 html = browser.html
 hemi_image = soup(html, 'html.parser')
 
@@ -212,14 +212,14 @@ for item in hemi_image.find_all("div", class_="item"):
 # In[22]:
 
 
-# 4. Print the list that holds the dictionary of each image url and title.
+# Print the list that holds the dictionary of each image url and title.
 hemisphere_image_urls
 
 
 # In[23]:
 
 
-# 5. Quit the browser
+# Quit the browser
 browser.quit()
 
 
