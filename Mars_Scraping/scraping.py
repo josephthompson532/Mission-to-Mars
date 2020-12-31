@@ -105,10 +105,10 @@ def title_url(browser):
     url = 'https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars'
     browser.visit(url)
 
-    # 2. Create a list to hold the images and titles.
+    # Create a list to hold the images and titles.
     hemisphere_image_urls = []
 
-    # 3. Write code to retrieve the image urls and titles for each hemisphere.
+    # Write code to retrieve the image urls and titles for each hemisphere.
     html = browser.html
     hemi_image = soup(html, 'html.parser')
 
